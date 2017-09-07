@@ -1,5 +1,5 @@
 # Stage 1
-FROM microsoft/aspnetcore-build:1.1.2 AS builder
+FROM microsoft/aspnetcore-build:1.1.2
 WORKDIR /source
 
 # copies and restore
@@ -10,6 +10,6 @@ RUN dotnet publish src/Web/WebMVC/WebMVC.csproj --output /app/
 # Stage 2
 FROM microsoft/aspnetcore:1.1.2
 WORKDIR /app
-COPY --from=builder /app .
+COPY --from=0 /app .
 ENTRYPOINT ["dotnet", "WebMVC.dll"]
 
