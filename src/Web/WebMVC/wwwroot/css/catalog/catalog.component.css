@@ -11,7 +11,8 @@
 }
 
 .esh-catalog-filters {
-  background-color: #00A69C;
+  /*background-color: #00A69C;*/
+  background-color: #83D01B;
   height: 65px;
 }
 
@@ -32,8 +33,7 @@
 }
 
 .esh-catalog-filter option {
-  /*background-color: #00A69C;*/
-  background-color: #83D01B;
+  background-color: #00A69C;
 }
 
 .esh-catalog-label {
