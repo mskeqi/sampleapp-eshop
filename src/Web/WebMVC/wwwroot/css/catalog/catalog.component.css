@@ -32,7 +32,8 @@
 }
 
 .esh-catalog-filter option {
-  background-color: #00A69C;
+  /*background-color: #00A69C;*/
+  background-color: #83D01B;
 }
 
 .esh-catalog-label {
