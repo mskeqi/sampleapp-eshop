@@ -11,14 +11,14 @@
 }
 
 .esh-catalog-filters {
-  background-color: #db1df1;
+  background-color: #f316b2;
   height: 65px;
 }
 
 .esh-catalog-filter {
   -webkit-appearance: none;
   background-color: transparent;
-  border-color: #e34df4;
+  border-color: #f547c2;
   color: #FFFFFF;
   cursor: pointer;
   margin-right: 1rem;
@@ -32,7 +32,7 @@
 }
 
 .esh-catalog-filter option {
-  background-color: #db1df1;
+  background-color: #f316b2;
 }
 
 .esh-catalog-label {
