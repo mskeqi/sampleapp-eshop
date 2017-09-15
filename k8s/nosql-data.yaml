@@ -17,6 +17,7 @@ kind: Deployment
 metadata:
   name: nosql-data
 spec:
+  paused: true
   template:
     metadata:
       labels:

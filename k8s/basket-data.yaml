@@ -17,6 +17,7 @@ kind: Deployment
 metadata:
   name: basket-data
 spec:
+  paused: true
   template:
     metadata:
       labels:
@@ -25,5 +26,5 @@ spec:
     spec:
       containers:
       - name: basket-data
-        image: crproxy.trafficmanager.net:5000/library/redis:3.2-alpine
+        image: redis:3.2-alpine
 

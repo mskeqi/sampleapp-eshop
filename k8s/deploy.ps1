@@ -120,6 +120,12 @@ if ($deployInfrastructure) {
     ExecKube -cmd 'set image deployments/keystore-data keystore-data=${registry}/library/redis:3.2-alpine'
     ExecKube -cmd 'set image deployments/rabbitmq rabbitmq=${registry}/library/rabbitmq:3.6.9-alpine'
     ExecKube -cmd 'set image deployments/nosql-data nosql-data=${registry}/library/mongo'
+
+    ExecKube -cmd 'rollout resume deployments/sql-data'
+    ExecKube -cmd 'rollout resume deployments/basket-data'
+    ExecKube -cmd 'rollout resume deployments/keystore-data'
+    ExecKube -cmd 'rollout resume deployments/rabbitmq'
+    ExecKube -cmd 'rollout resume deployments/nosql-data'
 }
 
 Write-Host 'Deploying code deployments (databases, redis, ...)' -ForegroundColor Yellow

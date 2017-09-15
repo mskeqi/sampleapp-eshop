@@ -17,6 +17,7 @@ kind: Deployment
 metadata:
   name: rabbitmq
 spec:
+  paused: true
   template:
     metadata:
       labels:
