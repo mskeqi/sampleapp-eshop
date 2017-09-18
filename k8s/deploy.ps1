@@ -218,5 +218,9 @@ ExecKube -cmd 'rollout resume deployments/webstatus'
 ExecKube -cmd 'rollout resume deployments/webspa'
 ExecKube -cmd 'rollout resume deployments/graceperiodmanager'
 
+# last remove imagePullSecrets for WebMVC
+Write-Host "Remove imagePullSecrets for WebMVC" -ForegroundColor Yellow
+ExecKube -cmd 'patch deployment webmvc --type json -p=''[{"op": "remove", "path": "/spec/template/spec/imagePullSecrets"}]'''
+
 Write-Host "WebSPA is exposed at http://$externalDns, WebMVC at http://$externalDns/webmvc, WebStatus at http://$externalDns/webstatus" -ForegroundColor Yellow
 
